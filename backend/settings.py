@@ -161,9 +161,18 @@ cloudinary.config(
 )
 
 # Use Cloudinary for media storage (uploaded images)
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
-print("STORAGE:", type(default_storage))
+from django.core.files.storage import default_storage
+default_storage._wrapped  # force resolution
+print("REAL STORAGE:", type(default_storage._wrapped))
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
