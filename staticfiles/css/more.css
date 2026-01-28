@@ -1,0 +1,142 @@
+body {
+  background-color: #E1CCFF;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-page {
+  width: 100%;
+  padding: 40px;
+}
+
+.back-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.more-list {
+  font-family: 'Instrument serif', sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.more-item {
+  font-size: 80px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.more-item:hover {
+  transform: translateX(20px);
+}
+
+.more-item > a {
+  text-decoration: none;
+  color: #221f21;
+}
+
+@font-face {
+  font-family: 'Instrument serif';
+  src: url("../assets/fonts/InstrumentSerif-Regular.ttf");
+}
+
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  transition: all 0.3s ease;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+@media (max-width: 1024px) {
+  .more-item {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .more-item {
+    font-size: 50px;
+  }
+  
+  .more-page {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .more-item {
+    font-size: 36px;
+  }
+  
+  .back-link {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .cta span {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 320px) {
+  .more-item {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+
+    <title>More | Somesh Behera</title>
+    <link rel="stylesheet" href="{% static './css/more.css' %}" />
+    <script src="{% static './js/app.js' %}"></script>
+  </head>
+
+  <body>
+    <main class="more-page">
+      <nav class="more-nav" aria-label="More sections navigation">
+        <a href="./index.html" class="back-link">
+          <button class="cta">
+            <svg
+              id="arrow-horizontal"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="10"
+              viewBox="0 0 46 16"
+            >
+              <path
+                id="Path_10"
+                data-name="Path 10"
+                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                transform="translate(30) scale(-1, 1)"
+              ></path>
+            </svg>
+            <span class="hover-underline-animation"> Go back </span>
+          </button>
+        </a>
+
+        <ul class="more-list" id="more-list"></ul>
+      </nav>
+    </main>
+  </body>
+</html>

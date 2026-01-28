@@ -1,0 +1,234 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static './css/skills.css' %}" />
+    <script src="{% static './js/app.js' %}"></script>
+    <title>Skills | Somesh Behera</title>
+  </head>
+  <body>
+    <a href="./more.html" class="back-link">
+      <button class="cta">
+        <svg
+          id="arrow-horizontal"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="10"
+          viewBox="0 0 46 16"
+        >
+          <path
+            id="Path_10"
+            data-name="Path 10"
+            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+            transform="translate(30) scale(-1, 1)"
+          ></path>
+        </svg>
+        <span class="hover-underline-animation"> Go back </span>
+      </button>
+    </a>
+    <div class="page-container">
+      <!-- Header Section -->
+      <header class="page-header">
+        <h1 class="main-heading">Skills I Earned</h1>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <section class="skills-progress-section">
+          <div class="section-header">
+            <h2 class="section-title">Skill Progress</h2>
+          </div>
+          <div class="skills-container" id = "skill-progress-id">
+            <!-- <div class="skill-box">
+              <span class="skill-title">Front-end Development</span>
+              <div class="skill-bar">
+                <span class="skill-per fed">
+                  <span class="tooltip">76%</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-box">
+              <span class="skill-title">Back-End Development</span>
+              <div class="skill-bar">
+                <span class="skill-per bed">
+                  <span class="tooltip">50%</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-box">
+              <span class="skill-title">DSA</span>
+              <div class="skill-bar">
+                <span class="skill-per dsa">
+                  <span class="tooltip">65%</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-box">
+              <span class="skill-title">Python</span>
+              <div class="skill-bar">
+                <span class="skill-per python">
+                  <span class="tooltip">90%</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-box">
+              <span class="skill-title">Python GUI</span>
+              <div class="skill-bar">
+                <span class="skill-per python-gui">
+                  <span class="tooltip">79%</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-box">
+              <span class="skill-title">AI/ML</span>
+              <div class="skill-bar">
+                <span class="skill-per ai-ml">
+                  <span class="tooltip">20%</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-box">
+              <span class="skill-title">App Development</span>
+              <div class="skill-bar">
+                <span class="skill-per appd" style = "width: 76%; animation-delay: 0.1s;">
+                  <span class="tooltip">60%</span>
+                </span>
+              </div>
+            </div> -->
+          </div>
+        </section>
+
+        <section class="skills-icons-section" id="skill-learned-id">
+          <div class="section-header">
+            <h2 class="section-title">Skills I Know</h2>
+          </div>
+
+          <div class="skills-grid" id = "skills-learned-id">
+            <!-- <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/c.png"
+                alt="c"
+              />
+              <p class="skill-name">C-Language</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/c-plus-plus-logo.png"
+                alt="c-plus-plus"
+              />
+              <p class="skill-name">CPP-Language</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/js.png"
+                alt="javascript"
+              />
+              <p class="skill-name">Java Script</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/windows/96/node-js.png"
+                alt="node-js"
+              />
+              <p class="skill-name">Node JS</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios/50/mysql-logo.png"
+                alt="mysql"
+              />
+              <p class="skill-name">MySQL</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/postgreesql.png"
+                alt="postgresql"
+              />
+              <p class="skill-name">PostgreSQL</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/nolan/64/mongo-db.png"
+                alt="mongodb"
+              />
+              <p class="skill-name">MongoDB</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/python.png"
+                alt="python"
+              />
+              <p class="skill-name">Python</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/color/48/numpy.png"
+                alt="numpy"
+              />
+              <p class="skill-name">NumPy</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="48"
+                height="48"
+                src="https://img.icons8.com/color/48/pandas.png"
+                alt="pandas"
+              />
+              <p class="skill-name">Pandas</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/css3.png"
+                alt="css3"
+              />
+              <p class="skill-name">CSS3</p>
+            </div>
+            <div class="skill-item">
+              <img
+                class="skill-icon"
+                width="50"
+                height="50"
+                src="./assets/svgs/Qt5.png"
+                alt="pyqt6"
+              />
+              <p class="skill-name">PyQt6</p>
+            </div> -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
