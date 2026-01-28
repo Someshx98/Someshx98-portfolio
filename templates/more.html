@@ -7,14 +7,14 @@
     <meta name="view-transition" content="same-origin" />
 
     <title>More | Somesh Behera</title>
-    <link rel="stylesheet" href="{% static './css/more.css' %}" />
-    <script src="{% static './js/app.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/more.css' %}" />
+    <script src="{% static 'js/app.js' %}"></script>
   </head>
 
   <body>
     <main class="more-page">
       <nav class="more-nav" aria-label="More sections navigation">
-        <a href="./index.html" class="back-link">
+        <a href="{% url 'home' %}" class="back-link">
           <button class="cta">
             <svg
               id="arrow-horizontal"
