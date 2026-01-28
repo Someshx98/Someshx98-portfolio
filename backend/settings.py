@@ -170,6 +170,10 @@ STORAGES = {
     },
 }
 
+CLOUDINARY_STORAGE = {
+    "DISABLE_COLLECTSTATIC": True
+}
+
 from django.core.files.storage import default_storage
 default_storage._wrapped  # force resolution
 print("REAL STORAGE:", type(default_storage._wrapped))
