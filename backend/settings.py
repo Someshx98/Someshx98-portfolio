@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
+import cloudinary
 from django.core.files.storage import default_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
