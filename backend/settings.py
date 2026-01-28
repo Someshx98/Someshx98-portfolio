@@ -161,18 +161,7 @@ cloudinary.config(
 )
 
 # Use Cloudinary for media storage (uploaded images)
-STORAGES = {
-    "default": {
-        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-
-CLOUDINARY_STORAGE = {
-    "DISABLE_COLLECTSTATIC": True
-}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 from django.core.files.storage import default_storage
 default_storage._wrapped  # force resolution
