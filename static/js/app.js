@@ -1,5 +1,3 @@
-console.log("JS Loaded");
-
 // ================= EMAIL =================
 function sendMail() {
   let parms = {
@@ -140,7 +138,8 @@ async function loadWelcome() {
     welcomeContainer.innerHTML = html;
 
     const btn = document.getElementById("hire-btn");
-    if (btn) btn.addEventListener("click", () => btn.classList.toggle("active"));
+    if (btn)
+      btn.addEventListener("click", () => btn.classList.toggle("active"));
   } catch (err) {
     console.error("Welcome Load Error:", err);
   }
@@ -198,7 +197,9 @@ loadExperience();
 
 // ================= EDUCATION =================
 async function loadEducation() {
-  const educationContainer = document.getElementById("education-card-container");
+  const educationContainer = document.getElementById(
+    "education-card-container",
+  );
   if (!educationContainer) return;
 
   try {
