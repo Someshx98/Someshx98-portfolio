@@ -159,7 +159,7 @@ async function loadMoreItems() {
     data.forEach((m) => {
       html += `
         <li class="more-item">
-          <a href="./${m.file || "#"}" class="more-link">${m.more || ""}</a>
+          <a href="/${m.file || "#"}" class="more-link">${m.more || ""}</a>
         </li>
       `;
     });
