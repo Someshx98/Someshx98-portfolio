@@ -1,11 +1,12 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
 class Project(models.Model):
     title = models.CharField(max_length = 100)
     description = models.TextField()
-    image = models.ImageField(upload_to = 'images/')
+    image = CloudinaryField('image', folder='images/')
     github = models.URLField(blank = True)
     live = models.BooleanField(blank = True)
 
@@ -41,8 +42,8 @@ class Logo(models.Model):
         return self.logoTitle
 
 class ProfilePicture(models.Model):
-    sketch = models.ImageField(upload_to='images/')
-    original = models.ImageField(upload_to='images/')
+    sketch = CloudinaryField('image', folder='images/')
+    original = CloudinaryField('image', folder='images/')
 
     def __str__(self):
         return f"Profile Image {self.id}"
@@ -68,4 +69,3 @@ class Experience(models.Model):
 
     def __str__(self):
         return self.title
-
