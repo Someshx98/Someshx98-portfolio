@@ -156,6 +156,7 @@ async function loadMoreItems() {
     let html = "";
 
     data.forEach((m) => {
+      // Use Absolute File Paths
       html += `
         <li class="more-item">
           <a href="/${m.file}" class="more-link">${m.more}</a>
